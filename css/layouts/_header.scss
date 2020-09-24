@@ -1,0 +1,103 @@
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+header {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+
+  nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 19px;
+
+    @include tablet {
+      padding: 15px 30px;
+    }
+
+    form {
+      order: 2;
+      @include tablet {
+        width: 100%;
+        max-width: 300px;
+        order: 1;
+      }
+
+      .input-container {
+        @include tablet {
+          border-radius: 18px;
+          border: 1px solid #d4d0d0;
+          padding: 5px 10px;
+          width: 100%;
+          display: flex;
+          background: #fff3f3;
+        }
+      }
+
+      img {
+        margin-right: 0;
+        @include tablet {
+          margin-right: 3px;
+        }
+      }
+
+      input {
+        display: none;
+        @include tablet {
+          display: inline-block;
+          border: 0;
+          outline: 0;
+          background: transparent;
+          flex: 1;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-width: 160px;
+      order: 1;
+      @include tablet {
+        order: 2;
+      }
+
+      .profile a img {
+        width: 50px;
+      }
+
+      .notif {
+        order: 3;
+        @include tablet {
+          order: 1;
+        }
+      }
+
+      .questions {
+        order: 2;
+      }
+
+      .profile {
+        order: 1;
+        @include tablet {
+          order: 3;
+        }
+      }
+    }
+  }
+}
