@@ -1,50 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <title>Homepage</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <form action="">
-          <div class="input-container">
-            <img src="./assets/images/search-line.svg" alt="" />
-            <input type="text" placeholder="Search" />
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+  <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/20.1.7/css/dx.common.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/20.1.7/css/dx.light.css" />
+  <script src="https://cdn3.devexpress.com/jslib/20.1.7/js/dx.all.js"></script>
+
+
+  <title>Homepage</title>
+</head>
+
+<body class="dx-viewport">
+  <div id="wrapper">
+    <aside id="sidebar">
+      <section class="logo"><a href="#"><img src="./assets/images/logo.png" alt="Edgox" /></a></section>
+      <section class="widgets">
+
+        <div class="user-info-box mt-4 pb-4 mb-4">
+          <div class="user-info-box__img">
+            <a href="#"><img class="rounded-circle" src="./assets/images/profile.jpg" alt="" /></a>
           </div>
-        </form>
-        <ul>
-          <li class="notif">
-            <a href="#"
-              ><img src="./assets/images/notification-2-fill.svg" alt=""
-            /></a>
-          </li>
-          <li class="questions">
-            <a href="#"
-              ><img src="./assets/images/question-answer-line.svg" alt=""
-            /></a>
-          </li>
-          <li class="profile">
-            <a href="#"
-              ><img
-                class="rounded-circle"
-                src="./assets/images/profile.jpg"
-                alt=""
-            /></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="home"></main>
-    <footer></footer>
-    <script src="./bootstrap/js/jquery.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js" defer></script>
-    <script src="./js/script.js" defer></script>
-  </body>
+          <div class="user-info-box__label">
+            <div class="user-info__name">
+              Kendal Rakha
+            </div>
+            <div class="user-info__id">
+              Student #: 00012343567
+            </div>
+          </div>
+          <div class="user-info-box__btn">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="rgba(149,164,166,1)"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="main_nav pb-4">
+          <nav>
+            <ul>
+              <li class="active">
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 12h4v9H3v-9zm14-4h4v13h-4V8zm-7-6h4v19h-4V2z" fill="rgba(149,164,166,1)"/></svg>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 12h4v9H3v-9zm14-4h4v13h-4V8zm-7-6h4v19h-4V2z" fill="rgba(149,164,166,1)"/></svg>
+                  <span>Institution</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 12h4v9H3v-9zm14-4h4v13h-4V8zm-7-6h4v19h-4V2z" fill="rgba(149,164,166,1)"/></svg>
+                  <span>Mentors</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 12h4v9H3v-9zm14-4h4v13h-4V8zm-7-6h4v19h-4V2z" fill="rgba(149,164,166,1)"/></svg>
+                  <span>Personality Trainers</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 12h4v9H3v-9zm14-4h4v13h-4V8zm-7-6h4v19h-4V2z" fill="rgba(149,164,166,1)"/></svg>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 12h4v9H3v-9zm14-4h4v13h-4V8zm-7-6h4v19h-4V2z" fill="rgba(149,164,166,1)"/></svg>
+                  <span>Payments</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="secondary_nav pt-4 mb-4">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">
+                  <span>Blog</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="rgba(149,164,166,1)"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Support</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="rgba(149,164,166,1)"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Help</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="rgba(149,164,166,1)"/></svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="settings_nav mt-auto pt-3 pb-3">
+          <nav>
+            <ul>
+              <li>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="rgba(149,164,166,1)"/></svg>
+                  <span>Settings</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </section>
+    </aside>
+    <div id="mainbar">
+      <header>
+        <nav>
+          <form action="">
+            <div class="input-container">
+              <img src="./assets/images/search-line.svg" alt="" />
+              <input type="text" placeholder="Search" />
+            </div>
+          </form>
+          <ul>
+            <li class="notif">
+              <a href="#"><img src="./assets/images/notification-2-fill.svg" alt="" /></a>
+            </li>
+            <li class="questions">
+              <a href="#"><img src="./assets/images/question-answer-line.svg" alt="" /></a>
+            </li>
+            <li class="profile">
+              <a href="#"><img class="rounded-circle" src="./assets/images/profile.jpg" alt="" /></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="contentarea">
+
+        <section id="breadcrumbs" class="mb-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <ul>
+                  <li><a href="#">First Tier</a> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" fill="rgba(149,164,166,1)"/></svg></li>
+                  <li><a href="#">Second Tier</a> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" fill="rgba(149,164,166,1)"/></svg></li>
+                  <li class="active"><a href="#">Dashboard</a></li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+        <section id="reports" class="mb-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <h2>Reports</h2>
+              </div>
+              <div class="col-6 text-right">
+                <button class="btn-white btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="rgba(149,164,166,1)"/></svg>
+                </button>
+                <button class="btn-blue btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="rgba(255,255,255,1)"/></svg>
+                  Generate Report                
+                </button>
+              </div>
+              <div class="col-12">
+                <hr />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 col-12">
+                <div class="card">
+                  <div class="card-body">
+                    content
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-9 col-12">
+                <div class="card">
+                  <div class="card-body">
+                    content
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="task" class="mb-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <h2>Task</h2>
+            </div>
+            <div class="col-6 text-right">
+              <button class="btn-white btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="rgba(149,164,166,1)"/></svg>
+              </button>
+              <button class="btn-blue btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="rgba(255,255,255,1)"/></svg>
+                Create New Task               
+              </button>
+            </div>
+            <div class="col-12">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="demo-container">
+                    <div id="tasks"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="card">
+                <div class="card-body">
+                  content
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+
+        
+
+      </main>
+    </div>
+  </div>
+  <footer></footer>
+  <script src="./bootstrap/js/bootstrap.min.js" defer></script>
+  <script src="./js/script.js" defer></script>
+
+  <script src="./js/devexpress/taskList.js" defer></script>
+</body>
+
 </html>
