@@ -26,9 +26,13 @@
       type="text/css"
       href="https://cdn3.devexpress.com/jslib/20.1.7/css/dx.light.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.quilljs.com/1.3.6/quill.min.js"
+    ></script>
     <script src="https://cdn3.devexpress.com/jslib/20.1.7/js/dx.all.js"></script>
 
-    <title>Homepage</title>
+    <title>Add Institutions</title>
   </head>
 
   <body class="dx-viewport">
@@ -90,7 +94,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="./add-institutions.html">
+                  <a href="add-institutions.html">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -292,180 +296,50 @@
             </ul>
           </nav>
         </header>
-        <main class="contentarea">
-          <section id="breadcrumbs" class="mb-3">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <ul>
-                    <li>
-                      <a href="#">First Tier</a>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
-                          fill="rgba(149,164,166,1)"
-                        />
-                      </svg>
-                    </li>
-                    <li>
-                      <a href="#">Second Tier</a>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
-                          fill="rgba(149,164,166,1)"
-                        />
-                      </svg>
-                    </li>
-                    <li class="active"><a href="#">Dashboard</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-
-        <section id="reports" class="mb-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <h2>Reports</h2>
-              </div>
-              <div class="col-6 text-right">
-                <button class="btn-white btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="rgba(149,164,166,1)"/></svg>
-                </button>
-                <button class="btn-blue btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="rgba(255,255,255,1)"/></svg>
-                  Generate Report                
-                </button>
-              </div>
-              <div class="col-12">
-                <hr />
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 col-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Students</h5>
-                    <div class="num-data mt-4 mb-4">1234</div>
-                    <div id="chart-demo">
-                      <div class="sparkline line2010"></div>
-                  </div>
+        <main class="contentarea addInstitute">
+          <div class="add-form container">
+            <form class="instituteForm" action="/add-inst" method="post">
+              <div id="formInstitute">
+                <!-- <div class="col-6">
+                  <div class="form-group">
+                    <label for="inst-name">Institution Name *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inst-name"
+                      aria-describedby="emailHelp"
+                    />
                   </div>
                 </div>
-              </div>
-              <div class="col-md-9 col-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Applications</h5>
-                    <div class="row mt-5 mb-3">
-                      <div class="col-md-4 col-12 right-border">
-                        <h5>Total Application</h5>
-                        <div class="num-data mt-2 mb-2">325</div>
-                      </div>
-                      <div class="col-md-4 col-12 right-border">
-                        <h5>Approved</h5>
-                        <div class="num-data mt-2 mb-2">5</div>
-                      </div>
-                      <div class="col-md-4 col-12">
-                        <h5>Rejected</h5>
-                        <div class="num-data mt-2 mb-2">2</div>
-                      </div>
-                    </div>
-
-                  </div>
+                <div class="col-6">
+                  <label for="inst-alias">Institution Alias *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inst-alias"
+                    aria-describedby="emailHelp"
+                  />
                 </div>
+
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="inst-name">DLI No.</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inst-name"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+                </div> -->
               </div>
-            </div>
-          </section>
-
-
-        <section id="task" class="mb-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <h2>Task</h2>
-            </div>
-            <div class="col-6 text-right">
-              <button class="btn-white btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="rgba(149,164,166,1)"/></svg>
-              </button>
-              <button class="btn-blue btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="rgba(255,255,255,1)"/></svg>
-                Create New Task               
-              </button>
-            </div>
-            <div class="col-12">
-              <hr />
-            </div>
+            </form>
           </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-body">
-                  <div class="demo-container">
-                    <div id="tasks"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="news" class="mb-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2>News & Announcements</h2>
-            </div>
-            <div class="col-12">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-body">
-                  <div class="demo-container">
-                    <div class="list-container">
-                      <div id="simpleList"></div>
-                  </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
         </main>
       </div>
     </div>
-
-  </div>
-  <footer></footer>
-  <script src="./bootstrap/js/bootstrap.min.js" defer></script>
-  <script src="./js/script.js" defer></script>
-
-  <script src="./js/devexpress/taskList.js" defer></script>
-  <script src="./js/devexpress/linechart.js" defer></script>
-  <script src="./js/devexpress/newslist.js" defer></script>
-</body>
-
-
-    <script src="./js/devexpress/taskList.js" defer></script>
+    <footer></footer>
+    <script src="./bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </body>
 </html>
