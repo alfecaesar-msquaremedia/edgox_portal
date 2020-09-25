@@ -6,6 +6,7 @@
     -moz-box-shadow: inset 4px 4px 5px 0px rgba(227,227,227,1);
     box-shadow: inset 4px 4px 5px 0px rgba(227,227,227,1);
     padding: 1em;
+    height: 100%;
 
     .container{
         max-width: none; 
@@ -46,6 +47,13 @@
                     }
                 }
             }
+        }
+    }
+
+    .card{
+
+        .right-border{
+            border-right: 1px solid #ccc;
         }
     }
 }
