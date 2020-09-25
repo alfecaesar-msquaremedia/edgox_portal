@@ -1,33 +1,3 @@
-// let theFields = {
-//   instituteName: "Name",
-//   instituteAlias: "alias",
-//   dliNo: "dli",
-//   logoFile: "Logo",
-//   instituteImageFile: "Image",
-//   aetterHeadFile: "Letterhead",
-//   address1: "Address 1",
-//   address2: "Address 2",
-//   country: "Country",
-//   proviceState: "Provice/State",
-//   city: "City",
-//   zipCode: "Zip Code",
-//   instituteLocationGeoCode: "Institutions Location Geo Code",
-//   instituteType: "Institution Type",
-//   instituteFounded: "Institution Founded",
-//   totalStudents: "TotalStudents",
-//   currency: "Currency",
-//   avgTuitionCost: "Avg. Tuition Cost",
-//   costOfLiving: "Cost of Living",
-//   applicationFee: "Application Fee",
-//   paymentLink: "Payment Link",
-//   website: "Website",
-//   videoLink: "Video Link",
-//   howToReach: "How To Reach",
-//   aboutInstitute: "About Institutions",
-//   features: "Features",
-//   credit
-// };
-
 let theFields = {
   "University Name": "",
   "University Logo": "",
@@ -142,150 +112,6 @@ let formInstitute = function () {
         },
       },
     ],
-
-    // items: [
-    //   {
-    //     dataField: "instituteName",
-    //     validationRules: [
-    //       {
-    //         type: "required",
-    //         message: "Institution Name is required",
-    //       },
-    //       {
-    //         type: "pattern",
-    //         pattern: "^[^0-9]+$",
-    //         message: "Do not use digits in the Institution Name",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     dataField: "Institution Alias",
-    //     validationRules: [
-    //       {
-    //         type: "required",
-    //         message: "Institution Alias is required",
-    //       },
-    //       {
-    //         type: "pattern",
-    //         pattern: "^[^0-9]+$",
-    //         message: "Do not use digits in the Institution Name",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     dataField: "dliNo",
-    //   },
-    //   {
-    //     dataField: "address1",
-    //   },
-    //   {
-    //     dataField: "address2",
-    //     colSpan: 2,
-    //   },
-    //   {
-    //     itemType: "group",
-    //     colCount: 4,
-    //     colSpan: 2,
-    //     items: [
-    //       {
-    //         dataField: "country",
-    //         validationRules: [
-    //           {
-    //             type: "pattern",
-    //             pattern: "^[^0-9]+$",
-    //             message: "Do not use digits in the Country",
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         dataField: "provinceState",
-    //         validationRules: [
-    //           {
-    //             type: "pattern",
-    //             pattern: "^[^0-9]+$",
-    //             message: "Do not use digits in the Provice/State",
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         dataField: "city",
-    //         validationRules: [
-    //           {
-    //             type: "pattern",
-    //             pattern: "^[^0-9]+$",
-    //             message: "Do not use digits in the City",
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         dataField: "zipCode",
-    //       },
-    //       {
-    //         dataField: "instituteLocationGeoCode",
-    //       },
-    //       {
-    //         dataField: "instituteType",
-    //       },
-    //       {
-    //         dataField: "instituteFounded",
-    //       },
-    //       {
-    //         dataField: "totalStudents",
-    //       },
-    //       {
-    //         dataField: "currency",
-    //       },
-    //       {
-    //         dataField: "avgTuitionCost",
-    //       },
-    //       {
-    //         dataField: "costOfLiving",
-    //       },
-    //       {
-    //         dataField: "applicationFee",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     dataField: "paymentLink",
-    //     colSpan: 2,
-    //   },
-    //   {
-    //     dataField: "website",
-    //     colSpan: 2,
-    //   },
-    //   {
-    //     dataField: "videoLink",
-    //     colSpan: 2,
-    //   },
-    //   {
-    //     dataField: "howToReach",
-    //     colSpan: 2,
-    //     editorType: "dxTextArea",
-    //   },
-    //   {
-    //     colSpan: 2,
-    //     dataField: "aboutInstitute",
-    //     editorType: "dxHtmlEditor",
-    //     editorOptions: {
-    //       height: 190,
-    //       toolbar: {
-    //         items: ["bold", "italic", "underline"],
-    //       },
-    //     },
-    //   },
-    //   {
-    //     colSpan: 2,
-    //     dataField: "features",
-    //     editorType: "dxHtmlEditor",
-    //     editorOptions: {
-    //       height: 190,
-    //       toolbar: {
-    //         items: ["bold", "italic", "underline"],
-    //       },
-    //     },
-    //   },
-    // ],
   });
 
   $("#logoFile").dxFileUploader({
@@ -393,11 +219,103 @@ let formMentors = function () {
   $("#formMentors").dxForm("instance").validate();
 };
 
+var mentorLists = [
+  {
+    key: "Steve Rogers A",
+    items: ["Bachelors Degree", "5+ years", "IT"],
+  },
+  {
+    key: "Steve Rogers B",
+    items: ["Bachelors Degree", "5+ years", "IT"],
+  },
+  {
+    key: "Steve Rogers C",
+    items: ["Bachelors Degree", "5+ years", "IT"],
+  },
+];
+
+var instituteLists = [
+  {
+    key: "Harvard University",
+    items: [
+      "Logo.png",
+      "Private",
+      "America",
+      "Professor Marvin",
+      "(51)-151-21",
+      "Professor Jasmin",
+      "(31)-151-11",
+    ],
+  },
+  {
+    key: "Oxford University",
+    items: [
+      "Logo.png",
+      "Private",
+      "America",
+      "Professor Marvin",
+      "(51)-151-21",
+      "Professor Jasmin",
+      "(31)-151-11",
+    ],
+  },
+  {
+    key: "Yale University",
+    items: [
+      "Logo.png",
+      "Private",
+      "America",
+      "Professor Marvin",
+      "(51)-151-21",
+      "Professor Jasmin",
+      "(31)-151-11",
+    ],
+  },
+  {
+    key: "Cambridge University",
+    items: [
+      "Logo.png",
+      "Private",
+      "America",
+      "Professor Marvin",
+      "(51)-151-21",
+      "Professor Jasmin",
+      "(31)-151-11",
+    ],
+  },
+];
+
+let renderMentorList = function () {
+  $("#mentorListing").dxList({
+    dataSource: mentorLists,
+    height: "100%",
+    grouped: true,
+    collapsibleGroups: true,
+    groupTemplate: function (data) {
+      return $("<div>Assigned: " + data.key + "</div>");
+    },
+  });
+};
+
+let renderInstitutionList = function () {
+  $("#instituteListing").dxList({
+    dataSource: instituteLists,
+    height: "100%",
+    grouped: true,
+    collapsibleGroups: true,
+    groupTemplate: function (data) {
+      return $("<div>Assigned: " + data.key + "</div>");
+    },
+  });
+};
+
 $(function () {
   if ($("main").hasClass("addInstitute")) {
     formInstitute();
+    renderInstitutionList();
   }
   if ($("main").hasClass("addMentors")) {
     formMentors();
+    renderMentorList();
   }
 });
