@@ -1,0 +1,27 @@
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+.add-form {
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.instituteForm {
+  .dx-layout-manager .dx-label-h-align.dx-flex-layout {
+    flex-direction: column;
+  }
+  .dx-item.dx-box-item {
+    margin-bottom: 5px;
+  }
+}
