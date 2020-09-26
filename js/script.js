@@ -83,6 +83,11 @@ let formInstitute = function () {
       },
       {
         dataField: "University Primary Contact Numbers",
+        validationRules: [
+          {
+            type: "numeric",
+          },
+        ],
       },
       {
         dataField: "University Secondary Contact Name",
@@ -101,6 +106,11 @@ let formInstitute = function () {
       },
       {
         dataField: "University Secondary Contact Number",
+        validationRules: [
+          {
+            type: "numeric",
+          },
+        ],
       },
       {
         itemType: "button",
@@ -309,6 +319,115 @@ let renderInstitutionList = function () {
   });
 };
 
+let personalityForm = function () {
+  $("#personalityForm").dxForm({
+    formData: {
+      personalityTrainingName: "",
+      degree: "Degree",
+      experience: "Experience",
+      specialization: "Specialization",
+    },
+    colCount: 4,
+    items: [
+      {
+        dataField: "personalityTrainingName",
+        validationRules: [
+          {
+            type: "required",
+            message: "Institution Name is required",
+          },
+          {
+            type: "pattern",
+            pattern: "^[^0-9]+$",
+            message: "Do not use digits in the Institution Name",
+          },
+        ],
+      },
+      {
+        dataField: "degree",
+        editorType: "dxSelectBox",
+        editorOptions: {
+          items: ["Associate Degree", "Bachelors Degree", "Masters"],
+          value: "",
+        },
+        validationRules: [
+          {
+            type: "required",
+            message: "Degree is Required",
+          },
+        ],
+      },
+      {
+        dataField: "experience",
+        editorType: "dxSelectBox",
+        editorOptions: {
+          items: ["0-2 years", "3-5 years", "5+ years"],
+          value: "",
+        },
+        validationRules: [
+          {
+            type: "required",
+            message: "Experience is Required",
+          },
+        ],
+      },
+      {
+        dataField: "specialization",
+        editorType: "dxSelectBox",
+        editorOptions: {
+          items: ["IT", "Law", "Science", "Medical"],
+          value: "",
+        },
+        validationRules: [
+          {
+            type: "required",
+            message: "Specialization is Required.",
+          },
+        ],
+      },
+    ],
+  });
+  $("#formMentors").dxForm("instance").validate();
+};
+
+let formPayments = function () {
+  $("#paymentForms").dxForm({
+    formData: {
+      amountPayableToUniversity: "",
+      amountPayableToMentors: "",
+      amountPayableToPersonalityTrainers: "",
+    },
+    colCount: 3,
+    items: [
+      {
+        dataField: "amountPayableToUniversity",
+        validationRules: [
+          {
+            type: "numeric",
+          },
+        ],
+      },
+      {
+        dataField: "amountPayabletToMentors",
+        validationRules: [
+          {
+            type: "numeric",
+          },
+        ],
+      },
+      {
+        dataField: "amountPayableToPersonalityTrainers",
+        validationRules: [
+          {
+            type: "numeric",
+          },
+        ],
+      },
+    ],
+  });
+  $("#paymentForms").dxForm("instance").validate();
+};
+
 $(function () {
   if ($("main").hasClass("addInstitute")) {
     formInstitute();
@@ -317,5 +436,11 @@ $(function () {
   if ($("main").hasClass("addMentors")) {
     formMentors();
     renderMentorList();
+  }
+  if ($("main").hasClass("addPersonality")) {
+    personalityForm();
+  }
+  if ($("main").hasClass("formPayments")) {
+    formPayments();
   }
 });
